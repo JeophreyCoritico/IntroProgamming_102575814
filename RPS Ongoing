@@ -12,13 +12,61 @@ namespace Rock_Paper_Scissors
         {
             string[] comOptions = { "rock", "paper", "scissors" };
 
-            Random random = new Random();
-            int start2 = random.Next(0, comOptions.Length);
-            Console.Write(comOptions[start2]);
+            //Random random = new Random();
+            //int start2 = random.Next(0, comOptions.Length);
+
+            int counter = 0;
 
 
+            while (counter < 3)
+            {
+
+
+                Random random = new Random();
+                int start2 = random.Next(0, comOptions.Length);
+
+                string input = Console.ReadLine();
+
+                Console.WriteLine(comOptions[start2]);
+
+                //if (input == "rock")
+                //{
+
+                //}
+
+                counter++;
+
+                //if (input == comOptions[0])
+                //{
+                //    Console.WriteLine("test1");
+                //}
+
+                //if (input == comOptions[1])
+                //{
+                //    Console.WriteLine("test2");
+                //}
+
+                //if (input == comOptions[2])
+                //{
+                //    Console.WriteLine("test3");
+                //}
+
+
+
+
+
+
+
+                //if (input == comOptions[2])
+                //{
+                //    Console.WriteLine("test");
+                //}
+
+            }
 
             Console.ReadKey();
         }
+
     }
 }
+
