@@ -1,0 +1,106 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Rock_Paper_Scissors
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> UserOptions = new List<string>();
+
+            UserOptions.Add("rock");
+            UserOptions.Add("paper");
+            UserOptions.Add("scissors");
+
+            List<string> WinLoseTie = new List<string>();
+            WinLoseTie.Add("Win");
+            WinLoseTie.Add("Lose");
+            WinLoseTie.Add("Tie");
+
+            Console.WriteLine("Rock, Paper or Scissors?");
+
+            Console.WriteLine();
+
+            Random r = new Random();
+            int options = r.Next(2);
+
+            string input;
+
+            input = Console.ReadLine();
+
+            if (options == 1) //Com = Rock
+            {
+                if (input == UserOptions[0])
+                {
+                    Console.WriteLine(WinLoseTie[2]);
+                }
+
+                 else if (input == UserOptions[1])
+                {
+                    Console.WriteLine(WinLoseTie[0]);
+                }
+
+                else if(input == UserOptions[2])
+                {
+                    Console.WriteLine(WinLoseTie[1]);
+                }
+                else
+                {
+                    Console.WriteLine("Choose: Rock, Paper or Scissors");
+                }
+                Console.Write("Computer chose:" + UserOptions[0]);
+            }
+
+            else if (options == 2) //Com = Paper
+            {
+                if (input == UserOptions[0])
+                {
+                    Console.WriteLine(WinLoseTie[1]);
+                }
+
+                else if(input == UserOptions[1])
+                {
+                    Console.WriteLine(WinLoseTie[2]);
+                }
+
+                else if(input == UserOptions[2])
+                {
+                    Console.WriteLine(WinLoseTie[0]);
+                }
+                else
+                {
+                    Console.WriteLine("Choose: Rock, Paper or Scissors");
+                }
+                Console.Write("Computer chose:" + UserOptions[1]);
+            }
+
+            else if (options == 3) //Com = Scissors
+            {
+                if (input == UserOptions[0])
+                {
+                    Console.WriteLine(WinLoseTie[0]);
+                }
+
+                else if(input == UserOptions[1])
+                {
+                    Console.WriteLine(WinLoseTie[1]);
+                }
+
+                else if (input == UserOptions[2])
+                {
+                    Console.WriteLine(WinLoseTie[2]);
+                }
+                else
+                {
+                    Console.WriteLine("Choose: Rock, Paper or Scissors");
+                }
+                Console.Write("Computer chose:" + UserOptions[2]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
