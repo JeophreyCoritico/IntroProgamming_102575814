@@ -12,6 +12,8 @@ namespace Rock_Paper_Scissors
         {
             string[] comOptions = { "rock", "paper", "scissors" };
 
+            //int[] comOptionsInt = Array.ConvertAll(comOptions, s => int.Parse(s));
+
             //Random random = new Random();
             //int start2 = random.Next(0, comOptions.Length);
 
@@ -27,7 +29,34 @@ namespace Rock_Paper_Scissors
 
                 string input = Console.ReadLine();
 
+                int toNum = 0;
+
+                if (input == "paper")
+                {
+                    toNum = 1;
+                }
+
+                else if (input == "scissors")
+                {
+                    toNum = 2;
+                }
+
                 Console.WriteLine(comOptions[start2]);
+
+                if(toNum < start2)
+                {
+                    Console.WriteLine("win");
+                }
+
+                if (toNum > start2)
+                {
+                    Console.WriteLine("lose");
+                }
+
+                if (toNum == start2)
+                {
+                    Console.WriteLine("tie");
+                }
 
                 //if (input == "rock")
                 //{
@@ -69,4 +98,3 @@ namespace Rock_Paper_Scissors
 
     }
 }
-
